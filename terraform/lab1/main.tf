@@ -5,7 +5,7 @@ provider "aws" {
 data "aws_caller_identity" "current" {}
 
 resource "aws_s3_bucket" "site" {
-  bucket = "${lower(data.aws_caller_identity.current.user_id)}-1.tp.exness.business"
+  bucket = "${lower(data.aws_caller_identity.current.user_id)}-1.my.corp.business"
   acl    = "public-read"
   force_destroy = true
 
